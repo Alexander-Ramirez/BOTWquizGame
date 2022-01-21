@@ -1,5 +1,5 @@
-
-
+let secondsLeft = 60;
+let finalScore = 0;
 
 let questions = [
     {
@@ -28,3 +28,60 @@ let questions = [
         correctAnswer: "Hufflepuff",
     },
 ]
+
+let currentQuestion = 0;
+let question =  questions[currentQuestion];
+
+document.querySelector("#question").textContent = questions[question].question;
+document.querySelector("#btn1").textContent = questions[currentQuestion].answers[0];
+document.querySelector("#btn2").textContent = questions[currentQuestion].answers[1];
+document.querySelector("#btn3").textContent = questions[currentQuestion].answers[2];
+document.querySelector("#btn4").textContent = questions[currentQuestion].answers[3];
+
+btn1.addEventListener("click", function() {
+    if (btn1 === questions[correctAnswe]) {
+        finalScore += 20;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        secondsLeft -= 5;
+        currentQuestion++;
+        nextQuestion();
+    }
+});
+
+btn2.addEventListener("click", function() {
+    if (btn2 === questions[correctAnswe]) {
+        finalScore += 20;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        secondsLeft -= 5;
+        currentQuestion++;
+        nextQuestion();
+    }
+});
+
+btn3.addEventListener("click", function() {
+    if (btn3 === questions[correctAnswe]) {
+        finalScore += 20;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        secondsLeft -= 5;
+        currentQuestion++;
+        nextQuestion();
+    }
+});
+
+btn4.addEventListener("click", function() {
+    if (btn4 === questions[correctAnswe]) {
+        finalScore += 20;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        secondsLeft -= 5;
+        currentQuestion++;
+        nextQuestion();
+    }
+});
