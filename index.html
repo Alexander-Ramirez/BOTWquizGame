@@ -16,7 +16,8 @@
     <body>
         <main> 
             <h1>Press "start" to begin the quiz</h1>
-            <section class="questions">
+            <section class="container">
+                <div id="question"></div>
                 <ui>
                     <li>
                         <button class="button" id="btn1"></button>
@@ -31,11 +32,20 @@
                         <button class="button" id="btn4"></button>
                     </li>
                 </ui>
-
             </section>
-            
-            
         </main>
+        <section>
+            <div>
+                <p>time</p>
+            </div>
+            <div>
+                <button id="startBtn">Start</button>
+                <button id="nextBtn">Next</button>
+                <button id="endBtn">End</button>
+            </div>
+
+        </section>
+
         <script src= "script.js"></script>
     </body>
 </html>
