@@ -1,54 +1,66 @@
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
 
+function buildQuiz(){}
 
-let questions = [
+function showResults(){}
+
+// display quiz right away
+buildQuiz();
+
+// on submit, show results
+submitButton.addEventListener('click', showResults);
+
+const myQuestions = [
     {
         question: "How many hearts do you need to get the master sword?",
-        answers: ["12", "13", "14", "11"],
-        correctAnswer: "13",
+        answers: {a: "12", b: "13", c: "14", d: "11"},
+        correctAnswer: "b",
     },
     {
         question: "What is the max amount of stamina rings that you can have?",
-        answers: ["3", "2.5", "2", "4"],
-        correctAnswer: "3",
+        answers: {a: "3", b: "2.5", c: "2", d: "4"},
+        correctAnswer: "a",
     },
     {
         question: "Is there a time limit to beat the game?",
-        answers: ["yes", "no"],
-        correctAnswer: "no",
+        answers: {a: "yes", b: "no"},
+        correctAnswer: "b",
     },
     {
         question: "What is the kings name?",
-        answers: ["King Daltus", "King Harkinian.", "King Daphnes", "King Rhoam"],
-        correctAnswer: "King Rhoam",
+        answers: {a: "King Daltus", b: "King Harkinian.", c: "King Daphnes", d: "King Rhoam"},
+        correctAnswer: "d",
     },
     {
         question: "Can you get the master sword without meeting Impa?",
-        answers: ["yes", "no"],
-        correctAnswer: "yes",
+        answers: {a: "yes", b: "no"},
+        correctAnswer: "a",
     },
     {
         question: "How many kokorok seeds are there?",
-        answers: ["1000", "900", "700", "800"],
-        correctAnswer: "900",
+        answers: {a: "1000", b: "900", c: "700", d: "800"},
+        correctAnswer: "b",
     },
     {
         question: "How many shrines are there?",
-        answers: ["120", "100", "150", "80"],
-        correctAnswer: "120",
+        answers: {a: "120", b: "100", c: "150", d: "80"},
+        correctAnswer: "a",
     },
     {
         question: "How many great fairys are there?",
-        answers: ["3", "5", "4", "2"],
-        correctAnswer: "4",
+        answers: {a: "3", b: "5", c: "4", d: "2"},
+        correctAnswer: "c",
     },
     {
         question: "What is the base damage the master sword does?",
-        answers: ["60", "20", "30", "50"],
-        correctAnswer: "30",
+        answers: {a: "60", b: "20", c: "30", d: "50"},
+        correctAnswer: "c",
     },
     {
         question: "How much do diamonds sell for?",
-        answers: ["250", "1000", "750", "500"],
-        correctAnswer: "500",
+        answers: {a: "250", b: "1000", c: "750", d: "500"},
+        correctAnswer: "d",
     },
 ]
