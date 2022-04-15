@@ -2,16 +2,6 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
-function buildQuiz(){}
-
-function showResults(){}
-
-// display quiz right away
-buildQuiz();
-
-// on submit, show results
-submitButton.addEventListener('click', showResults);
-
 const myQuestions = [
     {
         question: "How many hearts do you need to get the master sword?",
@@ -63,4 +53,40 @@ const myQuestions = [
         answers: {a: "250", b: "1000", c: "750", d: "500"},
         correctAnswer: "d",
     },
-]
+];
+
+function buildQuiz(){
+    const output = [];
+
+    myQuestions.forEach(
+        (currentQuestion, questionNumber) => {
+            const answers = [];
+
+            for(letter in currentQuestion.answers){
+                answers.push(
+                    `<label>
+                        <input type="radio" name="question${questionNumber}" value="${letter}">
+                        ${letter} :
+                        ${currentQuestion.answers[letter]}
+                    </label>`
+                );
+            }
+
+            output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join('')} </div>`
+            );
+        }
+    );
+
+    quizContainer.innerHTML = output.join('');
+}
+
+function showResults(){}
+
+// display quiz right away
+buildQuiz();
+
+// on submit, show results
+submitButton.addEventListener('click', showResults);
+
