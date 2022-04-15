@@ -70,7 +70,7 @@ function buildQuiz(){
                         ${currentQuestion.answers[letter]}
                     </label>`
                 );
-            }
+            };
 
             output.push(
                 `<div class="question"> ${currentQuestion.question} </div>
@@ -80,9 +80,13 @@ function buildQuiz(){
     );
 
     quizContainer.innerHTML = output.join('');
-}
+};
 
-function showResults(){}
+function showResults(){
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    let numCorrect = 0;
+};
 
 // display quiz right away
 buildQuiz();
