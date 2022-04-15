@@ -1,6 +1,4 @@
-let secondsLeft = 60;
-let finalScore = 0;
-let timeEl = document.querySelector("#timer");
+
 
 let questions = [
     {
@@ -54,78 +52,3 @@ let questions = [
         correctAnswer: "500",
     },
 ]
-
-let currentQuestion = 0;
-let question =  questions[currentQuestion];
-
-document.querySelector("#question").textContent = questions[currentQuestion].question;
-document.querySelector("#btn1").textContent = questions[currentQuestion].answers[0];
-document.querySelector("#btn2").textContent = questions[currentQuestion].answers[1];
-document.querySelector("#btn3").textContent = questions[currentQuestion].answers[2];
-document.querySelector("#btn4").textContent = questions[currentQuestion].answers[3];
-
-startBtn.addEventListener("click", function() {
-    secondsLeft = 60;
-    document.getElementById("startBtn").style.display = "none";
-    document.getElementById("container").style.visibility = "visible";
-    startQuiz();
-})
-
-function startQuiz() {
-    timeInterval = setInterval(function () {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft;
-    }, 1000)
-}
-
-nextBtn.addEventListener("click",function() {
-    questions++;
-})
-
-btn1.addEventListener("click", function() {
-    if (btn1 === questions[correctAnswer]) {
-        finalScore += 20;
-        currentQuestion++;
-        nextQuestion();
-    } else {
-        secondsLeft -= 5;
-        currentQuestion++;
-        nextQuestion();
-    }
-});
-
-btn2.addEventListener("click", function() {
-    if (btn2 === questions[correctAnswer]) {
-        finalScore += 20;
-        currentQuestion++;
-        nextQuestion();
-    } else {
-        secondsLeft -= 5;
-        currentQuestion++;
-        nextQuestion();
-    }
-});
-
-btn3.addEventListener("click", function() {
-    if (btn3 === questions[correctAnswer]) {
-        finalScore += 20;
-        currentQuestion++;
-        nextQuestion();
-    } else {
-        secondsLeft -= 5;
-        currentQuestion++;
-        nextQuestion();
-    }
-});
-
-btn4.addEventListener("click", function() {
-    if (btn4 === questions[correctAnswer]) {
-        finalScore += 20;
-        currentQuestion++;
-        nextQuestion();
-    } else {
-        secondsLeft -= 5;
-        currentQuestion++;
-        nextQuestion();
-    }
-});
