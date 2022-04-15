@@ -83,7 +83,7 @@ nextBtn.addEventListener("click",function() {
 })
 
 btn1.addEventListener("click", function() {
-    if (btn1 === questions[correctAnswe]) {
+    if (btn1 === questions[correctAnswer]) {
         finalScore += 20;
         currentQuestion++;
         nextQuestion();
@@ -95,7 +95,7 @@ btn1.addEventListener("click", function() {
 });
 
 btn2.addEventListener("click", function() {
-    if (btn2 === questions[correctAnswe]) {
+    if (btn2 === questions[correctAnswer]) {
         finalScore += 20;
         currentQuestion++;
         nextQuestion();
@@ -107,7 +107,7 @@ btn2.addEventListener("click", function() {
 });
 
 btn3.addEventListener("click", function() {
-    if (btn3 === questions[correctAnswe]) {
+    if (btn3 === questions[correctAnswer]) {
         finalScore += 20;
         currentQuestion++;
         nextQuestion();
@@ -119,7 +119,7 @@ btn3.addEventListener("click", function() {
 });
 
 btn4.addEventListener("click", function() {
-    if (btn4 === questions[correctAnswe]) {
+    if (btn4 === questions[correctAnswer]) {
         finalScore += 20;
         currentQuestion++;
         nextQuestion();
